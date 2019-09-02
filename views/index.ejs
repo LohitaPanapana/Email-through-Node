@@ -1,0 +1,16 @@
+<div class="container">
+    <% students.forEach(function(student){ %>
+        <div class="row">
+            <div class="col-6">
+                <h1><%= student.name %></h1>
+                <p><%= student.role %></p>
+                <p><%= student.location %></p>
+                <p><%= student.email %></p>
+            </div>
+        </div>
+    <% }) %>
+    <a href="/" class="btn btn-outline-primary">Go Back</a>
+    <form action="/sendEmail" method="GET">
+        <button class="btn btn-outline-success">Email to all</button>
+    </form>
+</div>
